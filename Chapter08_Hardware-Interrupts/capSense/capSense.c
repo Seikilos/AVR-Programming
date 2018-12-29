@@ -35,7 +35,9 @@ ISR(PCINT1_vect) {
 
 int main(void) {
   // -------- Inits --------- //
-  clock_prescale_set(clock_div_1);                       /* full speed */
+  
+  /* full speed, hint: F_CPU must be 8000000UL */
+  clock_prescale_set(clock_div_1);   
   initUSART();
   printString("==[ Cap Sensor ]==\r\n\r\n");
 
